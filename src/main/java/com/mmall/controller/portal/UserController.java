@@ -129,7 +129,6 @@ public class UserController {
         User currentUser = (User)session.getAttribute(Const.CURRENT_USER);
         if(currentUser == null){
             return ServerResponse.createByErrorMessage("用户未登录，无法修改");
-            //return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),"未登录，需要强制登录状态使10");
         }
         //为了防止横向越权，将更改用户信息的id设置成和当前用一样的id
         user.setId(currentUser.getId());

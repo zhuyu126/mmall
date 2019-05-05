@@ -251,7 +251,12 @@ public class UserServiceImpl implements IUserService {
         return ServerResponse.createByErrorMessage("更新信息失败");
     }
 
-    //校验当前用户登录是否是管理员身份
+    //backend
+    /**
+     * 校验当前用户登录是否是管理员身份
+     * @param user
+     * @return
+     */
     @Override
     public ServerResponse<String> checkAdminRole(User user) {
         if(user != null && user.getRole().intValue() == Const.Role.ROLE_ADMIN){

@@ -25,8 +25,8 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/manage/product")
-public class ProductController {
+@RequestMapping(value = "/manage/product")
+public class ProductManageController {
 
     @Autowired
     private IUserService iUserService;
@@ -140,7 +140,7 @@ public class ProductController {
     }
 
 
-    @RequestMapping(value = "upload.do")
+    @RequestMapping(value = "richtext_img_upload.do")
     @ResponseBody
     public Map richTextImgUpload(HttpSession session, @RequestParam(value = "upload_file",required = false) MultipartFile file, HttpServletRequest request, HttpServletResponse response){
         Map resultMap=Maps.newHashMap();

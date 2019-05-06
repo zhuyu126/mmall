@@ -13,7 +13,7 @@ public class PropertiesUtil {
 
     private static Properties props;
 
-    static {
+    static {//静态块优于普通代码块优于构造代码块，静态代码块只执行一次
         String fileName = "mmall.properties";
         props = new Properties();
         try {//读属性文件，获取类加载器，加载配置文件

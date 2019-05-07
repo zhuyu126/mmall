@@ -32,4 +32,12 @@ public class Const {
         int ROLE_CUSTOMER=0;//普通用户
         int ROLE_ADMIN=1;//普通用户
     }
+
+    public interface Cart{
+        int CHECKED=1;//购物车中选中商品
+        int NO_CHECKED=0;//购物车中未选中商品
+        String LIMIT_NUM_FAIL="LIMIT_NUM_FAIL";
+        String LIMIT_NUM_SUCCESS="LIMIT_NUM_SUCCESS";
+    }
+
 }

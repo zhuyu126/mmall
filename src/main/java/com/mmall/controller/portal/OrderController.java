@@ -70,7 +70,7 @@ public class OrderController {
         } catch (AlipayApiException e) {
             logger.error("支付宝验证回调异常",e);
         }
-        // todo 验证各种数据
+        //验证各种数据
 
         ServerResponse serverResponse=iOrderService.aliPayCallback(params);
         if (iOrderService.aliPayCallback(params).isSuccess()){
